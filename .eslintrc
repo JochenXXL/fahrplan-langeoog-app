@@ -1,0 +1,10 @@
+{
+  "extends": "rallycoding",
+  "rules": {
+    "import/no-named-as-default-member": 0,
+    "guard-for-in": 0,
+    "no-restricted-syntax": 0,
+    "max-len": ["error", { "ignoreRegExpLiterals": true }],
+    "no-mixed-operators": 0
+  }
+}
