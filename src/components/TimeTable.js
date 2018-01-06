@@ -27,6 +27,7 @@ class TimeTable extends Component {
         <FlatList
           data={this.state.data}
           renderItem={({ item }) => <ListItem item={item} />}
+          style={{ paddingBottom: 20 }}
         />
       </ScrollView>
     );
