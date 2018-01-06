@@ -5,6 +5,7 @@ import { Text, View, StyleSheet } from 'react-native';
 import TopNav from '../components/TopNav';
 import Container from '../components/common/Container';
 import TimeTable from '../components/TimeTable';
+import DatePicker from '../components/DatePicker';
 
 class BensersielTabScreen extends Component {
   state = {
@@ -53,7 +54,7 @@ class BensersielTabScreen extends Component {
     } else if (this.state.tabs.tomorrow) {
       content = <TimeTable day="tomorrow" location="Bensersiel" />;
     } else {
-      content = <Text>Fahrplan Bensersiel Datum wählen</Text>;
+      content = <DatePicker location="Bensersiel" />;
     }
 
     return (
