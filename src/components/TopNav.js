@@ -1,25 +1,25 @@
 import React from 'react';
 import { View, Button, StyleSheet } from 'react-native';
 
-const TopNav = () => (
+const TopNav = props => (
   <View style={styles.topNavContainerStyle}>
     <View style={styles.buttonContainer}>
       <Button
-        onPress={() => alert('hi')}
+        onPress={props.showToday}
         title="Heute"
         style={styles.buttonStyle}
       />
     </View>
     <View style={styles.buttonContainer}>
       <Button
-        onPress={() => alert('hi')}
+        onPress={props.showTomorrow}
         title="Morgen"
         style={styles.buttonStyle}
       />
     </View>
     <View style={styles.buttonContainer}>
       <Button
-        onPress={() => alert('hi')}
+        onPress={props.showPicker}
         title="Datum"
         style={styles.buttonStyle}
       />
