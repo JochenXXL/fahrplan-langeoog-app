@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 import Container from '../components/common/Container';
+import TopNav from '../components/TopNav';
 
 class BensersielTabScreen extends Component {
   render() {
     return (
-      <Container>
-        <Text>Hello Bensersiel</Text>
-      </Container>
+      <View>
+        <TopNav />
+        <Container>
+          <Text>Hello Bensersiel</Text>
+        </Container>
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({});
 
 export default BensersielTabScreen;
