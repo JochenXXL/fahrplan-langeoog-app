@@ -3,10 +3,10 @@ import { View, Text, StyleSheet } from 'react-native';
 
 const TimeTableDescription = () => (
   <View style={styles.constainerStyle}>
-    <View style={[styles.companyContainerStyle, { borderLeftColor: 'red' }]}>
+    <View style={[styles.companyContainerStyle, { borderLeftColor: '#531DFF' }]}>
       <Text style={styles.textStyle}>Schiffahrt Langeoog</Text>
     </View>
-    <View style={[styles.companyContainerStyle, { borderLeftColor: 'blue' }]}>
+    <View style={[styles.companyContainerStyle, { borderLeftColor: '#FFAA00' }]}>
       <Text style={styles.textStyle}>MS Flinthörn</Text>
     </View>
   </View>
