@@ -1,3 +1,4 @@
+/* global alert:true */
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
@@ -8,7 +9,11 @@ class LangeoogTabScreen extends Component {
   render() {
     return (
       <View>
-        <TopNav />
+        <TopNav
+          showToday={() => alert('Heute Langeoog')}
+          showTomorrow={() => alert('Morgen Langeoog')}
+          showPicker={() => alert('Datum Langeoog')}
+        />
         <Container>
           <Text>Hello Langeoog</Text>
         </Container>
