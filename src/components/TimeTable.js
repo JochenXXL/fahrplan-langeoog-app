@@ -4,15 +4,6 @@ import { View, FlatList } from 'react-native';
 import ListItem from './common/ListItem';
 import TimeTableDescription from './TimeTableDescription';
 
-// const data = [
-//   { key: '1', time: '07:10', company: 'SL' },
-//   { key: '2', time: '09:30', company: 'DW' },
-//   { key: '1', time: '09:30', company: 'SL' },
-//   { key: '2', time: '11:30', company: 'SL' },
-//   { key: '1', time: '16:00', company: 'DW' },
-//   { key: '2', time: '16:00', company: 'SL' }
-// ];
-
 class TimeTable extends Component {
   state = {
     data: []
@@ -25,7 +16,8 @@ class TimeTable extends Component {
         this.setState({
           data: parsedRes
         });
-      });
+      })
+      .catch(err => console.log(err));
   }
 
   render() {
