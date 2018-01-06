@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import { Text } from 'react-native';
 
-import { View, Text } from 'react-native';
+import Container from '../components/common/Container';
 
 class LangeoogTabScreen extends Component {
   render() {
     return (
-      <View>
+      <Container>
         <Text>Hello Langeoog</Text>
-      </View>
+      </Container>
     );
   }
 }
