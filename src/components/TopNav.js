@@ -8,6 +8,7 @@ const TopNav = props => (
         onPress={props.showToday}
         title="Heute"
         style={styles.buttonStyle}
+        color="#FFD300"
       />
     </View>
     <View style={styles.buttonContainer}>

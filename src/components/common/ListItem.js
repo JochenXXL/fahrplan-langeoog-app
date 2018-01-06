@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     borderBottomColor: '#D3D3D3',
     borderLeftWidth: 5,
     flexDirection: 'row',
-    padding: 5,
-    margin: 1,
+    padding: 7,
+    margin: 2,
     backgroundColor: 'white'
   },
   timeContainerStyle: {
