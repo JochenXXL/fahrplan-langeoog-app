@@ -6,17 +6,63 @@ import Container from '../components/common/Container';
 import TopNav from '../components/TopNav';
 
 class BensersielTabScreen extends Component {
+  state = {
+    tabs: {
+      today: true,
+      tomorrow: false,
+      picker: false
+    }
+  };
+
+  showToday = () => {
+    this.setState({
+      tabs: {
+        today: true,
+        tomorrow: false,
+        picker: false
+      }
+    });
+  };
+
+  showTomorrow = () => {
+    this.setState({
+      tabs: {
+        today: false,
+        tomorrow: true,
+        picker: false
+      }
+    });
+  };
+
+  showPicker = () => {
+    this.setState({
+      tabs: {
+        today: false,
+        tomorrow: false,
+        picker: true
+      }
+    });
+  };
+
   render() {
+    let content = <Text>Fahrplan Bensersiel heute</Text>;
+
+    if (this.state.tabs.today) {
+      content = <Text>Fahrplan Bensersiel heute</Text>;
+    } else if (this.state.tabs.tomorrow) {
+      content = <Text>Fahrplan Bensersiel morgen</Text>;
+    } else {
+      content = <Text>Fahrplan Bensersiel Datum wählen</Text>;
+    }
+
     return (
       <View>
         <TopNav
-          showToday={() => alert('Heute Bensersiel')}
-          showTomorrow={() => alert('Morgen Bensersiel')}
-          showPicker={() => alert('Datum Bensersiel')}
+          showToday={this.showToday}
+          showTomorrow={this.showTomorrow}
+          showPicker={this.showPicker}
         />
-        <Container>
-          <Text>Hello Bensersiel</Text>
-        </Container>
+        <Container>{content}</Container>
       </View>
     );
   }
