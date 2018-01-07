@@ -1,16 +1,18 @@
 /* global alert:true */
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 import Container from '../components/common/Container';
 import TimeTable from '../components/TimeTable';
+import TimeTableDescription from '../components/TimeTableDescription';
 
 class TimeTableTabScreen extends Component {
   render() {
+    console.log('loaded timetable');
     return (
       <View>
-        <Text>{this.props.date.toString()}</Text>
         <Container>
+          <TimeTableDescription />
           <TimeTable date={this.props.date} location="Bensersiel" />
         </Container>
       </View>
