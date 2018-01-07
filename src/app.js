@@ -3,6 +3,10 @@ import { registerScreens } from './screens';
 
 registerScreens();
 
+const today = new Date();
+const tomorrow = new Date();
+tomorrow.setDate(today.getDate() + 1);
+
 Navigation.startTabBasedApp({
   tabs: [
     {
@@ -12,12 +16,18 @@ Navigation.startTabBasedApp({
       title: 'Abfahrt Bensersiel',
       topTabs: [
         {
-          screenId: 'fpl.TestScreen',
-          title: 'Tab One'
+          screenId: 'fpl.TimeTableTabScreen',
+          title: 'Heute',
+          passProps: {
+            date: today
+          }
         },
         {
-          screenId: 'fpl.TestScreen',
-          title: 'Tab Two'
+          screenId: 'fpl.TimeTableTabScreen',
+          title: 'Morgen',
+          passProps: {
+            date: tomorrow
+          }
         }
       ]
     },
