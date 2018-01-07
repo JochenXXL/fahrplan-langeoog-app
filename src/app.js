@@ -9,7 +9,17 @@ Navigation.startTabBasedApp({
       label: 'Bensersiel',
       screen: 'fpl.BensersielTabScreen',
       icon: require('./assets/home.png'),
-      title: 'Abfahrt Bensersiel'
+      title: 'Abfahrt Bensersiel',
+      topTabs: [
+        {
+          screenId: 'fpl.TestScreen',
+          title: 'Tab One'
+        },
+        {
+          screenId: 'fpl.TestScreen',
+          title: 'Tab Two'
+        }
+      ]
     },
     {
       label: 'Langeoog',
