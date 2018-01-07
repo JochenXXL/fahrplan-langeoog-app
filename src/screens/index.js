@@ -4,6 +4,7 @@ import BensersielTabScreen from './BensersielTabScreen';
 import LangeoogTabScreen from './LangeoogTabScreen';
 import SettingsTabScreen from './SettingsTabScreen';
 import TimeTableTabScreen from './TimeTableTabScreen';
+import DatePickerTabScreen from './DatePickerTabScreen';
 
 // register main screens
 export function registerScreens() {
@@ -22,5 +23,9 @@ export function registerScreens() {
   Navigation.registerComponent(
     'fpl.TimeTableTabScreen',
     () => TimeTableTabScreen
+  );
+  Navigation.registerComponent(
+    'fpl.DatePickerTabScreen',
+    () => DatePickerTabScreen
   );
 }
