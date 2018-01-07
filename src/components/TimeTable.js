@@ -16,6 +16,7 @@ class TimeTable extends Component {
         this.setState({
           data: parsedRes
         });
+        console.log(`should fetch this date:${this.props.date}`);
       })
       .catch(err => console.log(err));
   }
