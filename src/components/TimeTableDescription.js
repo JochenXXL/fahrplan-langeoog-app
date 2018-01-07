@@ -19,8 +19,8 @@ const TimeTableDescription = () => (
 const styles = StyleSheet.create({
   constainerStyle: {
     flexDirection: 'row',
-    paddingTop: 5,
-    paddingBottom: 12
+    paddingTop: 2,
+    paddingBottom: 8
   },
   companyContainerStyle: {
     flexDirection: 'row',
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     paddingLeft: 5
   },
   textStyle: {
-    fontSize: 16
+    fontSize: 14
   }
 });
 
