@@ -19,27 +19,57 @@ Navigation.startTabBasedApp({
           screenId: 'fpl.TimeTableTabScreen',
           title: 'Heute',
           passProps: {
-            date: today
+            date: today,
+            location: 'Bensersiel'
           }
         },
         {
           screenId: 'fpl.TimeTableTabScreen',
           title: 'Morgen',
           passProps: {
-            date: tomorrow
+            date: tomorrow,
+            location: 'Bensersiel'
           }
         },
         {
           screenId: 'fpl.DatePickerTabScreen',
-          title: 'Datum'
+          title: 'Datum',
+          passProps: {
+            location: 'Bensersiel'
+          }
         }
       ]
     },
     {
       label: 'Langeoog',
-      screen: 'fpl.LangeoogTabScreen',
+      screen: 'fpl.TimeTableTabScreen',
       icon: require('./assets/home.png'),
-      title: 'Abfahrt Langeoog'
+      title: 'Abfahrt Langeoog',
+      topTabs: [
+        {
+          screenId: 'fpl.TimeTableTabScreen',
+          title: 'Heute',
+          passProps: {
+            date: today,
+            location: 'Langeoog'
+          }
+        },
+        {
+          screenId: 'fpl.TimeTableTabScreen',
+          title: 'Morgen',
+          passProps: {
+            date: tomorrow,
+            location: 'Langeoog'
+          }
+        },
+        {
+          screenId: 'fpl.DatePickerTabScreen',
+          title: 'Datum',
+          passProps: {
+            location: 'Langeoog'
+          }
+        }
+      ]
     },
     {
       label: 'Einstellungen',
