@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { FlatList, ScrollView, Text } from 'react-native';
 
 import ListItem from './common/ListItem';
-import TimeTableDescription from './TimeTableDescription';
 
 class TimeTable extends Component {
   state = {
@@ -24,12 +23,10 @@ class TimeTable extends Component {
   render() {
     return (
       <ScrollView>
-        <Text>{console.log(this.props.date)}</Text>
-        <TimeTableDescription />
         <FlatList
           data={this.state.data}
           renderItem={({ item }) => <ListItem item={item} />}
-          style={{ paddingBottom: 20 }}
+          style={{ paddingBottom: 60 }}
         />
       </ScrollView>
     );
