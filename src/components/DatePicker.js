@@ -1,10 +1,17 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, Button } from 'react-native';
 
-const DatePicker = ({ location }) => (
-  <View>
-    <Text>DatePicker {location}</Text>
-  </View>
-);
+class DatePicker extends Component {
+  state = {};
+
+  render() {
+    return (
+      <View>
+        <Text>DatePicker {this.props.location}</Text>
+        <Button onPress={() => console.log('pressed')} title="Datepicker" />
+      </View>
+    );
+  }
+}
 
 export default DatePicker;
