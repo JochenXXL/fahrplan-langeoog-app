@@ -11,7 +11,7 @@ Navigation.startTabBasedApp({
   tabs: [
     {
       label: 'Bensersiel',
-      screen: 'fpl.BensersielTabScreen',
+      screen: 'fpl.TimeTableTabScreen',
       icon: require('./assets/home.png'),
       title: 'Abfahrt Bensersiel',
       topTabs: [
@@ -28,6 +28,10 @@ Navigation.startTabBasedApp({
           passProps: {
             date: tomorrow
           }
+        },
+        {
+          screenId: 'fpl.DatePickerTabScreen',
+          title: 'Datum'
         }
       ]
     },
