@@ -6,8 +6,8 @@ const ListItem = ({ item }) => (
     style={[
       styles.itemContainerStyle,
       item.company === 'SL'
-        ? { borderLeftColor: '#531DFF' }
-        : { borderLeftColor: '#FFAA00' }
+        ? { borderLeftColor: '#004ba0' }
+        : { borderLeftColor: '#f57c00' }
     ]}
   >
     <View style={styles.timeContainerStyle}>
