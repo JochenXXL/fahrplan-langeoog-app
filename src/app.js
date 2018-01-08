@@ -1,3 +1,4 @@
+import { PixelRatio } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import { registerScreens } from './screens';
 
@@ -77,5 +78,22 @@ Navigation.startTabBasedApp({
       icon: require('./assets/home.png'),
       title: 'Einstellungen'
     }
-  ]
+  ],
+  appStyle: {
+    navBarTextColor: '#FFFFFF',
+    navBarBackgroundColor: '#3a4c91',
+    navBarTextFontSize: 20,
+    navBarTitleTextCentered: true,
+    statusBarColor: '#002563',
+    topTabsHeight: 30,
+    navBarHeight: 45,
+    tabBarBackgroundColor: '#ffffff',
+    tabBarButtonColor: '#6b77c2',
+    tabBarSelectedButtonColor: '#002563',
+    topBarBorderColor: '#004ba0',
+    topTabTextColor: '#e5e5e5',
+    selectedTopTabTextColor: '#e5e5e5',
+    selectedTopTabIndicatorHeight: PixelRatio.get() * 3,
+    selectedTopTabIndicatorColor: '#002563'
+  }
 });
