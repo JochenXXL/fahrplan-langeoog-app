@@ -4,12 +4,12 @@ import { View, Text, StyleSheet } from 'react-native';
 const TimeTableDescription = () => (
   <View style={styles.constainerStyle}>
     <View
-      style={[styles.companyContainerStyle, { borderLeftColor: '#531DFF' }]}
+      style={[styles.companyContainerStyle, { borderLeftColor: '#004ba0' }]}
     >
       <Text style={styles.textStyle}>Schiffahrt Langeoog</Text>
     </View>
     <View
-      style={[styles.companyContainerStyle, { borderLeftColor: '#FFAA00' }]}
+      style={[styles.companyContainerStyle, { borderLeftColor: '#f57c00' }]}
     >
       <Text style={styles.textStyle}>MS Flinthörn</Text>
     </View>
