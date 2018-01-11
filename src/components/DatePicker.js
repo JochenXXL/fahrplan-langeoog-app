@@ -1,55 +1,92 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
-import DatePickerComp from 'react-native-datepicker';
-import TimeTable from './TimeTable';
+import { ScrollView, StyleSheet } from 'react-native';
+import { Calendar, LocaleConfig } from 'react-native-calendars';
+
+LocaleConfig.locales.fr = {
+  monthNames: [
+    'Januar',
+    'Februar',
+    'März',
+    'April',
+    'Mai',
+    'Juni',
+    'Juli',
+    'August',
+    'September',
+    'Oktober',
+    'November',
+    'Dezember'
+  ],
+  monthNamesShort: [
+    'Jan.',
+    'Févr.',
+    'Mars',
+    'Avril',
+    'Mai',
+    'Juin',
+    'Juil.',
+    'Août',
+    'Sept.',
+    'Oct.',
+    'Nov.',
+    'Déc.'
+  ],
+  dayNames: [
+    'Sonntag',
+    'Monatag',
+    'Dienstag',
+    'Mittwoch',
+    'Donnerstag',
+    'Freitag',
+    'Samstag'
+  ],
+  dayNamesShort: ['Son.', 'Mon.', 'Di.', 'Mi.', 'Do.', 'Fr.', 'Sa.']
+};
+
+LocaleConfig.defaultLocale = 'fr';
 
 class DatePicker extends Component {
   constructor(props) {
     super(props);
-    this.state = { date: '' };
+    this.state = {};
+    this.onDayPress = this.onDayPress.bind(this);
+  }
+
+  onDayPress(day) {
+    // reformat date to german format
+    const date = new Date(day.dateString);
+    const dateString = `${date.getDate()}-${date.getMonth() +
+      1}-${date.getFullYear()}`;
+    // set State for selected date and german date
+    this.setState({
+      selected: day.dateString,
+      date: this.date
+    });
+    console.log(dateString);
   }
 
   render() {
-    let timeTable = <View />;
-
-    if (this.state.date !== '') {
-      timeTable = <TimeTable date={this.state.date} location="Bensersiel" />;
-    }
-
     return (
-      <View>
-        <DatePickerComp
-          style={{ width: 200 }}
-          date={this.state.date}
-          mode="date"
-          androidMode="calendar"
-          placeholder="Datum wählen"
-          format="DD-MM-YYYY"
-          minDate="11-01-2018"
-          maxDate="11-01-2019"
-          showIcon={false}
-          confirmBtnText="Confirm"
-          cancelBtnText="Cancel"
-          customStyles={{
-            dateIcon: {
-              position: 'absolute',
-              left: 0,
-              top: 4,
-              marginLeft: 0
-            },
-            dateInput: {
-              marginLeft: 36
-            }
-            // ... You can check the source to find the other keys.
-          }}
-          onDateChange={date => {
-            this.setState({ date });
+      <ScrollView>
+        <Calendar
+          minDate={Date()}
+          onDayPress={this.onDayPress}
+          style={styles.calendar}
+          hideExtraDays
+          markedDates={{ [this.state.selected]: { selected: true } }}
+          theme={{
+            selectedDayBackgroundColor: '#6b77c2',
+            todayTextColor: '#6b77c2',
+            arrowColor: '#002563'
           }}
         />
-        {timeTable}
-      </View>
+      </ScrollView>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  calendar: {}
+});
 
 export default DatePicker;
