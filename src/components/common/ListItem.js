@@ -2,44 +2,52 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 const ListItem = ({ item }) => (
-  <View
-    style={[
-      styles.itemContainerStyle,
-      item.company === 'SL'
-        ? { borderLeftColor: '#004ba0' }
-        : { borderLeftColor: '#f57c00' }
-    ]}
-  >
-    <View style={styles.timeContainerStyle}>
-      <Text style={styles.textStyle}>{item.time}</Text>
+  <View style={styles.containerStyle}>
+    <View style={styles.leftColStyle}>
+      <Text style={styles.timeStyle}>{item.time}</Text>
+      <Text style={styles.locationStyle}>ab Hafen</Text>
+    </View>
+    <View style={styles.centerColStyle}>
+      <Text style={styles.companyStyle}>Schiffahrt Langeoog</Text>
+    </View>
+    <View style={styles.rightColStyle}>
+      <Text>Info</Text>
     </View>
   </View>
 );
 
 const styles = StyleSheet.create({
-  itemContainerStyle: {
-    borderTopWidth: 1,
-    borderRightWidth: 1,
-    borderBottomWidth: 1,
-    borderTopColor: '#D3D3D3',
-    borderRightColor: '#D3D3D3',
-    borderBottomColor: '#D3D3D3',
-    borderLeftWidth: 5,
+  containerStyle: {
     flexDirection: 'row',
-    padding: 7,
-    margin: 2,
-    backgroundColor: 'white'
+    padding: 5,
+    borderBottomWidth: 1,
+    borderBottomColor: '#D1D1D1'
   },
-  timeContainerStyle: {
-    flex: 3,
-    alignItems: 'center'
-  },
-  companyContainerStyle: {
+  leftColStyle: {
     flex: 1,
     alignItems: 'center'
   },
-  textStyle: {
-    fontSize: 18
+  centerColStyle: {
+    flex: 2,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  rightColStyle: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  timeStyle: {
+    fontSize: 24,
+    color: '#303030'
+  },
+  locationStyle: {
+    fontSize: 12,
+    color: '#4D4D4D'
+  },
+  companyStyle: {
+    fontSize: 14,
+    color: '#4D4D4D'
   }
 });
 
