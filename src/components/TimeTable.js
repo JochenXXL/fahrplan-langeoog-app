@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { FlatList, ScrollView, Text } from 'react-native';
+import { FlatList, ScrollView } from 'react-native';
+import Spinner from '../components/common/Spinner';
 
 import ListItem from './common/ListItem';
 
 class TimeTable extends Component {
   state = {
-    data: []
+    data: [],
+    isLoading: true
   };
 
   componentWillMount() {
@@ -13,7 +15,8 @@ class TimeTable extends Component {
       .then(res => res.json())
       .then(parsedRes => {
         this.setState({
-          data: parsedRes
+          data: parsedRes,
+          isLoading: false
         });
         console.log(`should fetch this date:${this.props.date}`);
       })
@@ -21,15 +24,19 @@ class TimeTable extends Component {
   }
 
   render() {
-    return (
-      <ScrollView>
-        <FlatList
-          data={this.state.data}
-          renderItem={({ item }) => <ListItem item={item} />}
-          style={{ paddingBottom: 60 }}
-        />
-      </ScrollView>
+    let content = (
+      <FlatList
+        data={this.state.data}
+        renderItem={({ item }) => <ListItem item={item} />}
+        style={{ paddingBottom: 60 }}
+      />
     );
+
+    if (this.state.isLoading) {
+      content = <Spinner />;
+    }
+
+    return <ScrollView>{content}</ScrollView>;
   }
 }
 
