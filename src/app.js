@@ -90,10 +90,10 @@ Navigation.startTabBasedApp({
     tabBarBackgroundColor: '#ffffff',
     tabBarButtonColor: '#6b77c2',
     tabBarSelectedButtonColor: '#002563',
-    topBarBorderColor: '#004ba0',
-    topTabTextColor: '#e5e5e5',
+    topBarBorderColor: '#3a4c91',
+    topTabTextColor: '#9ca5c8',
     selectedTopTabTextColor: '#e5e5e5',
-    selectedTopTabIndicatorHeight: PixelRatio.get() * 3,
-    selectedTopTabIndicatorColor: '#002563'
+    selectedTopTabIndicatorHeight: PixelRatio.get() * 2,
+    selectedTopTabIndicatorColor: '#ffffff'
   }
 });
