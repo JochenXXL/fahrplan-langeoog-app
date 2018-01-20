@@ -10,3 +10,4 @@ The Fahrplan Langeoog App shows ferry timetable of the available ferries from Be
 * [React Native Navigation](https://github.com/wix/react-native-navigation)
 * [React Native Datepicker](https://github.com/xgfe/react-native-datepicker)
 * [React Native Autolink](https://github.com/joshswan/react-native-autolink)
+* [React Native Splash Screen](https://github.com/crazycodeboy/react-native-splash-screen)
