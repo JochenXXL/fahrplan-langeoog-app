@@ -11,12 +11,12 @@ const Heading = props => (
 const styles = StyleSheet.create({
   containerStyle: {
     paddingTop: 10,
-    paddingButtom: 10
+    paddingBottom: 10
   },
   textStyle: {
-    textSize: 24,
-    textColor: 'blue'
+    fontSize: 24,
+    color: '#002563'
   }
 });
 
-export default Heading;
+export { Heading };
