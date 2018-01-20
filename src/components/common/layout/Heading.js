@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Text, View, StyleSheet } from 'react-native';
 
-const Heading = props => (
+const Heading = ({ children }) => (
   <View style={styles.containerStyle}>
-    <Text style={styles.textStyle}>{props.children}</Text>
+    <Text style={styles.textStyle}>{children}</Text>
   </View>
 );
 
