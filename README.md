@@ -2,7 +2,7 @@
 
 ## About
 
-The Fahrplan Langeoog App shows ferry timetable of the available ferries from Bensersiel to Lan in an easy way. As a datasource it uses the http://fahrplan-langeoog.de api.
+The Fahrplan Langeoog App shows the ferry timetable of the available ferries from Bensersiel to Langeoog in an easy way. As a datasource it uses the http://fahrplan-langeoog.de api.
 
 ## Libraries
 
