@@ -11,7 +11,7 @@ class TimeTableTabScreen extends Component {
     return (
       <View>
         <TimeTableDate date={'11. Januar 2018'} />
-        <TimeTable date={this.props.date} location="Bensersiel" />
+        <TimeTable date={this.props.date} location={this.props.location} />
       </View>
     );
   }

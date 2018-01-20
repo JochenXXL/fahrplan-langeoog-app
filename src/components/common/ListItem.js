@@ -8,7 +8,9 @@ const ListItem = ({ item }) => (
       <Text style={styles.locationStyle}>ab Hafen</Text>
     </View>
     <View style={styles.centerColStyle}>
-      <Text style={styles.companyStyle}>Schiffahrt Langeoog</Text>
+      <Text style={styles.companyStyle}>
+        {item.company === 'SL' ? 'Schiffahrt Langeoog' : 'MS-Flinthörn'}
+      </Text>
     </View>
     <View style={styles.rightColStyle}>
       <Text>Info</Text>

@@ -11,7 +11,11 @@ class TimeTable extends Component {
   };
 
   componentWillMount() {
-    fetch('http://fahrplan-langeoog.de/api/test.json')
+    fetch(
+      `http://fahrplan-langeoog.de/api/timetable.php?location=${
+        this.props.location
+      }`
+    )
       .then(res => res.json())
       .then(parsedRes => {
         this.setState({
