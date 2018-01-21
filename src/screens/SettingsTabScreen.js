@@ -40,6 +40,11 @@ class SettingsTabScreen extends Component {
           </Paragraph>
 
           <Paragraph>
+            <BoldText>Foto der Langeoog III:</BoldText>
+            <Text>Ein Dahmer Lizen einfügen</Text>
+          </Paragraph>
+
+          <Paragraph>
             <Text>
               Dies ist keine offizielle App der Kurverwaltung Langeoog. Die
               Fahrplandaten werden von{' '}
