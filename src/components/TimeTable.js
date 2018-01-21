@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatList, ScrollView } from 'react-native';
+import { FlatList, ScrollView, TouchableWithoutFeedback } from 'react-native';
 import Spinner from '../components/common/Spinner';
 
 import ListItem from './common/ListItem';
@@ -31,7 +31,9 @@ class TimeTable extends Component {
     let content = (
       <FlatList
         data={this.state.data}
-        renderItem={({ item }) => <ListItem item={item} />}
+        renderItem={({ item }) => (
+          <ListItem item={item} navigator={this.props.navigator} />
+        )}
         style={{ paddingBottom: 60 }}
       />
     );
