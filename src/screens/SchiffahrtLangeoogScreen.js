@@ -61,23 +61,25 @@ const SchiffartLangeoogScreen = () => (
           <TableRowItem right>15,00 €</TableRowItem>
         </TableRow>
       </Table>
-      <Text>
+      <Text style={styles.textStyle}>
         Vollständige Preisliste:{' '}
         <Autolink
           text="https://www.langeoog.de/sites/default/files/2017-12/Preise_2018.pdf"
           truncate={19}
           showAlert
+          linkStyle={{ color: '#3a4c91' }}
         />
       </Text>
       <Heading>Kontakt</Heading>
       <Paragraph>
-        <Text>Tourismus-Service Langeoog</Text>
-        <Text>Rathaus Langeoog</Text>
-        <Text>Hauptstraße 28</Text>
-        <Text>26465 Langeoog</Text>
-        <Text>Telefon: 04972 / 690-0</Text>
-        <Text>
-          E-Mail: <Autolink text="info@langeoog.de" />
+        <Text style={styles.textStyle}>Tourismus-Service Langeoog</Text>
+        <Text style={styles.textStyle}>Rathaus Langeoog</Text>
+        <Text style={styles.textStyle}>Hauptstraße 28</Text>
+        <Text style={styles.textStyle}>26465 Langeoog</Text>
+        <Text style={styles.textStyle}>Telefon: 04972 / 690-0</Text>
+        <Text style={styles.textStyle}>
+          E-Mail:{' '}
+          <Autolink text="info@langeoog.de" linkStyle={{ color: '#3a4c91' }} />
         </Text>
       </Paragraph>
     </Container>

@@ -8,7 +8,8 @@ const Table = ({ children }) => (
 
 const styles = StyleSheet.create({
   tableStyle: {
-    margin: 5,
+    marginTop: 10,
+    marginBottom: 10,
     backgroundColor: '#f3f3f3'
   }
 });

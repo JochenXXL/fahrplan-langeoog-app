@@ -12,7 +12,7 @@ class SettingsTabScreen extends Component {
         <Container>
           <Paragraph>
             <Text style={styles.textCenter}>
-              Sende Kommentare oder Vorschläge an
+              Senden Sie Kommentare oder Vorschläge an
             </Text>
             <Autolink
               text="info@i-modich.de"
@@ -40,8 +40,31 @@ class SettingsTabScreen extends Component {
           </Paragraph>
 
           <Paragraph>
-            <BoldText>Foto der Langeoog III:</BoldText>
-            <Text>Ein Dahmer Lizen einfügen</Text>
+            <BoldText>Foto der MS-Flinthörn:</BoldText>
+            <Text>
+              Mit Genehmigung von{' '}
+              <Autolink
+                text="http://www.ms-flinthoern.de"
+                linkStyle={{ color: '#3a4c91' }}
+              />
+            </Text>
+          </Paragraph>
+
+          <Paragraph>
+            <BoldText>Karten</BoldText>
+            <Text>
+              Daten von{' '}
+              <Autolink
+                text="http://www.openstreetmap.org/"
+                linkStyle={{ color: '#3a4c91' }}
+              />{' '}
+              - Veröffentlicht unter ODbL:{' '}
+              <Autolink
+                text="http://opendatacommons.org/licenses/odbl/"
+                truncate={22}
+                linkStyle={{ color: '#3a4c91' }}
+              />
+            </Text>
           </Paragraph>
 
           <Paragraph>
