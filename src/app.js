@@ -84,6 +84,7 @@ Navigation.startTabBasedApp({
     navBarBackgroundColor: '#3a4c91',
     navBarTextFontSize: 20,
     navBarTitleTextCentered: true,
+    navBarButtonColor: '#ffffff',
     statusBarColor: '#002563',
     topTabsHeight: 30,
     navBarHeight: 45,
