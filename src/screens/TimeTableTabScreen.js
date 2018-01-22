@@ -10,7 +10,7 @@ class TimeTableTabScreen extends Component {
     console.log('loaded timetable');
     return (
       <View>
-        <TimeTableDate date={'11. Januar 2018'} />
+        <TimeTableDate date={this.props.date} />
         <TimeTable
           date={this.props.date}
           location={this.props.location}
