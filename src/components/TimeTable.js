@@ -11,7 +11,7 @@ class TimeTable extends Component {
     isLoading: true
   };
 
-  componentWillMount() {
+  componentDidMount() {
     const dateFormatted = formatDateApi(this.props.date);
 
     fetch(
