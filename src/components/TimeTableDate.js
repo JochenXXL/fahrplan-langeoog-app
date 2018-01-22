@@ -1,10 +1,11 @@
 import React from 'react';
-
 import { View, Text, StyleSheet } from 'react-native';
+
+import { formatDatePretty } from '../formatDate';
 
 const TimeTableDate = ({ date }) => (
   <View style={styles.containerStyle}>
-    <Text style={styles.TextStyle}>{date}</Text>
+    <Text style={styles.TextStyle}>{formatDatePretty(date)}</Text>
   </View>
 );
 
