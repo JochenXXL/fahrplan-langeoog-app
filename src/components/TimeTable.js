@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { FlatList, ScrollView, TouchableWithoutFeedback } from 'react-native';
+import { FlatList, ScrollView } from 'react-native';
 import Spinner from '../components/common/Spinner';
 
 import ListItem from './common/ListItem';
+import { formatDateApi } from '../formatDate';
 
 class TimeTable extends Component {
   state = {
@@ -11,10 +12,12 @@ class TimeTable extends Component {
   };
 
   componentWillMount() {
+    const dateFormatted = formatDateApi(this.props.date);
+
     fetch(
       `http://fahrplan-langeoog.de/api/timetable.php?location=${
         this.props.location
-      }`
+      }&date=${dateFormatted}`
     )
       .then(res => res.json())
       .then(parsedRes => {
