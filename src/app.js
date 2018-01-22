@@ -13,7 +13,7 @@ Navigation.startTabBasedApp({
     {
       label: 'Bensersiel',
       screen: 'fpl.TimeTableTabScreen',
-      icon: require('./assets/home.png'),
+      icon: require('./assets/App_Icon_windraeder_Bensersiel.png'),
       title: 'Abfahrt Bensersiel',
       topTabs: [
         {
@@ -44,7 +44,7 @@ Navigation.startTabBasedApp({
     {
       label: 'Langeoog',
       screen: 'fpl.TimeTableTabScreen',
-      icon: require('./assets/home.png'),
+      icon: require('./assets/App_Icon_Turm.png'),
       title: 'Abfahrt Langeoog',
       topTabs: [
         {
@@ -73,10 +73,10 @@ Navigation.startTabBasedApp({
       ]
     },
     {
-      label: 'Einstellungen',
+      label: 'Info',
       screen: 'fpl.SettingsTabScreen',
-      icon: require('./assets/home.png'),
-      title: 'Einstellungen'
+      icon: require('./assets/App_Icon_Info.png'),
+      title: 'Information'
     }
   ],
   appStyle: {
