@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import { Calendar, LocaleConfig } from 'react-native-calendars';
+import { formatDateApi } from '../formatDate';
 
-LocaleConfig.locales.fr = {
+LocaleConfig.locales.de = {
   monthNames: [
     'Januar',
     'Februar',
@@ -43,7 +44,7 @@ LocaleConfig.locales.fr = {
   dayNamesShort: ['Son.', 'Mon.', 'Di.', 'Mi.', 'Do.', 'Fr.', 'Sa.']
 };
 
-LocaleConfig.defaultLocale = 'fr';
+LocaleConfig.defaultLocale = 'de';
 
 class DatePicker extends Component {
   constructor(props) {
@@ -55,14 +56,21 @@ class DatePicker extends Component {
   onDayPress(day) {
     // reformat date to german format
     const date = new Date(day.dateString);
-    const dateString = `${date.getDate()}-${date.getMonth() +
-      1}-${date.getFullYear()}`;
     // set State for selected date and german date
     this.setState({
       selected: day.dateString,
       date: this.date
     });
-    console.log(dateString);
+    this.props.navigator.push({
+      screen: 'fpl.TimeTableTabScreen',
+      title: `Abfahrt ${this.props.location}`,
+      passProps: {
+        date,
+        location: this.props.location
+      },
+      animationType: 'slide-horizontal'
+    });
+    console.log(formatDateApi(date));
   }
 
   render() {
