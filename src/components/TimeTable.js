@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { FlatList, ScrollView } from 'react-native';
-import Spinner from '../components/common/Spinner';
+import { FlatList, ScrollView, View } from 'react-native';
+import { AdMobBanner } from 'react-native-admob';
 
+import Spinner from '../components/common/Spinner';
 import ListItem from './common/ListItem';
 import { formatDateApi } from '../formatDate';
 
@@ -37,7 +38,7 @@ class TimeTable extends Component {
         renderItem={({ item }) => (
           <ListItem item={item} navigator={this.props.navigator} />
         )}
-        style={{ paddingBottom: 60 }}
+        style={{ paddingBottom: 100 }}
       />
     );
 

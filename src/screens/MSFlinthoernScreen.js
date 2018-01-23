@@ -1,6 +1,14 @@
 import React from 'react';
-import { Text, Image, ScrollView, Dimensions, StyleSheet } from 'react-native';
+import {
+  Text,
+  Image,
+  ScrollView,
+  Dimensions,
+  StyleSheet,
+  View
+} from 'react-native';
 import Autolink from 'react-native-autolink';
+import { AdMobBanner } from 'react-native-admob';
 
 import Container from '../components/common/Container';
 import { Paragraph, Heading } from '../components/common/layout';
@@ -24,6 +32,14 @@ const MSFlinthoernScreen = () => (
           auf der MS-Flinthörn wird die Überfahrt zu einem besonderen Erlebnis.
         </Text>
       </Paragraph>
+      <View style={{ alignItems: 'center' }}>
+        <AdMobBanner
+          adSize="mediumRectangle"
+          adUnitID="ca-app-pub-3940256099942544/6300978111"
+          testDevices={[AdMobBanner.simulatorId]}
+          onAdFailedToLoad={error => console.error(error)}
+        />
+      </View>
       <Heading>Standort</Heading>
       <Text style={styles.textStyle}>
         Sie finden die MS-Flinthörn im mittleren Bereichs des Hafens.
@@ -57,7 +73,7 @@ const MSFlinthoernScreen = () => (
           <TableRowItem right>10,00 €</TableRowItem>
         </TableRow>
       </Table>
-      <Text style={styles.textStyle}>
+      <Text style={[styles.textStyle, { paddingBottom: 10 }]}>
         Vollständige Preisliste:{' '}
         <Autolink
           text="http://www.ms-flinthoern.de/langeoog-bensersiel/"
@@ -66,6 +82,14 @@ const MSFlinthoernScreen = () => (
           linkStyle={{ color: '#3a4c91' }}
         />
       </Text>
+      <View style={{ alignItems: 'center' }}>
+        <AdMobBanner
+          adSize="banner"
+          adUnitID="ca-app-pub-3940256099942544/6300978111"
+          testDevices={[AdMobBanner.simulatorId]}
+          onAdFailedToLoad={error => console.error(error)}
+        />
+      </View>
       <Heading>Kontakt</Heading>
       <Paragraph>
         <Text style={styles.textStyle}>Reederei Damwerth GMBH</Text>

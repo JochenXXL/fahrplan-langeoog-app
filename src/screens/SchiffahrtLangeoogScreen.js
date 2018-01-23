@@ -1,6 +1,14 @@
 import React from 'react';
-import { Text, Image, ScrollView, Dimensions, StyleSheet } from 'react-native';
+import {
+  Text,
+  Image,
+  ScrollView,
+  Dimensions,
+  StyleSheet,
+  View
+} from 'react-native';
 import Autolink from 'react-native-autolink';
+import { AdMobBanner } from 'react-native-admob';
 
 import Container from '../components/common/Container';
 import { Paragraph, Heading } from '../components/common/layout';
@@ -24,10 +32,19 @@ const SchiffartLangeoogScreen = () => (
           IV gelangen Sie in ca. einer Stunde auf die Insel Langeoog.
         </Text>
       </Paragraph>
-      <Text style={styles.textStyle}>
+      <Text style={[styles.textStyle, { paddingBottom: 10 }]}>
         Der schiffseigene Kiosk versorgt Sie mit Getränken und kleinen Snacks -
         "Eine Bockwurst und ein Jever bitte."
       </Text>
+      <View style={{ alignItems: 'center' }}>
+        <AdMobBanner
+          adSize="mediumRectangle"
+          adUnitID="ca-app-pub-3940256099942544/6300978111"
+          testDevices={[AdMobBanner.simulatorId]}
+          onAdFailedToLoad={error => console.error(error)}
+        />
+      </View>
+
       <Heading>Standort</Heading>
       <Text style={styles.textStyle}>
         Durch das große Hauptgebäude gelangen Sie direkt auf das Schiff.
@@ -61,7 +78,7 @@ const SchiffartLangeoogScreen = () => (
           <TableRowItem right>15,00 €</TableRowItem>
         </TableRow>
       </Table>
-      <Text style={styles.textStyle}>
+      <Text style={[styles.textStyle, { paddingBottom: 10 }]}>
         Vollständige Preisliste:{' '}
         <Autolink
           text="https://www.langeoog.de/sites/default/files/2017-12/Preise_2018.pdf"
@@ -70,6 +87,14 @@ const SchiffartLangeoogScreen = () => (
           linkStyle={{ color: '#3a4c91' }}
         />
       </Text>
+      <View style={{ alignItems: 'center' }}>
+        <AdMobBanner
+          adSize="banner"
+          adUnitID="ca-app-pub-3940256099942544/6300978111"
+          testDevices={[AdMobBanner.simulatorId]}
+          onAdFailedToLoad={error => console.error(error)}
+        />
+      </View>
       <Heading>Kontakt</Heading>
       <Paragraph>
         <Text style={styles.textStyle}>Tourismus-Service Langeoog</Text>
