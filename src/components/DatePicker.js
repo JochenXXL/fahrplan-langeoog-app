@@ -68,7 +68,14 @@ class DatePicker extends Component {
         date,
         location: this.props.location
       },
-      animationType: 'slide-horizontal'
+      animationType: 'slide-horizontal',
+      rightButtons: [
+        {
+          icon: require('../assets/share.png'), //if you want an image button
+          id: 'share', // id of the button which will pass to your press event handler. See the section bellow for Android specific button ids
+          buttonColor: 'white' // Set color for the button (can also be used in setButtons function to set different button style programatically)
+        }
+      ]
     });
     console.log(formatDateApi(date));
   }
