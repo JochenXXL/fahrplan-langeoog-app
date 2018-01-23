@@ -11,6 +11,7 @@ import com.facebook.soloader.SoLoader;
 
 import com.reactnativenavigation.NavigationApplication;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
+import fr.greweb.reactnativeviewshot.RNViewShotPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -27,6 +28,7 @@ public class MainApplication extends NavigationApplication {
   //   protected List<ReactPackage> getPackages() {
   //     return Arrays.<ReactPackage>asList(
   //         new MainReactPackage(),
+            
             
   //     );
   //   }
@@ -60,7 +62,8 @@ public class MainApplication extends NavigationApplication {
       return Arrays.<ReactPackage>asList(
           // eg. new VectorIconsPackage()
           new SplashScreenReactPackage(),
-          new RNAdMobPackage()
+          new RNAdMobPackage(),
+          new RNViewShotPackage()
       );
   }
 
