@@ -39,7 +39,7 @@ const SchiffartLangeoogScreen = () => (
       <View style={{ alignItems: 'center' }}>
         <AdMobBanner
           adSize="mediumRectangle"
-          adUnitID="ca-app-pub-3940256099942544/6300978111"
+          adUnitID="ca-app-pub-8741291600421705/6216591044"
           testDevices={[AdMobBanner.simulatorId]}
           onAdFailedToLoad={error => console.error(error)}
         />
@@ -90,7 +90,7 @@ const SchiffartLangeoogScreen = () => (
       <View style={{ alignItems: 'center' }}>
         <AdMobBanner
           adSize="banner"
-          adUnitID="ca-app-pub-3940256099942544/6300978111"
+          adUnitID="ca-app-pub-8741291600421705/6216591044"
           testDevices={[AdMobBanner.simulatorId]}
           onAdFailedToLoad={error => console.error(error)}
         />
