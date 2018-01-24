@@ -19,10 +19,10 @@ const TimeTableDate = ({ date }) => (
 const styles = StyleSheet.create({
   containerStyle: {
     paddingTop: 6,
-
     alignItems: 'center',
     borderBottomWidth: 1,
-    borderBottomColor: '#D1D1D1'
+    borderBottomColor: '#D1D1D1',
+    backgroundColor: '#ffffff'
   },
   TextStyle: {
     fontSize: 16,

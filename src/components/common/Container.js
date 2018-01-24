@@ -7,7 +7,8 @@ const Container = ({ children }) => (
 
 const styles = StyleSheet.create({
   containerStyle: {
-    padding: 10
+    padding: 10,
+    backgroundColor: '#ffffff'
   }
 });
 

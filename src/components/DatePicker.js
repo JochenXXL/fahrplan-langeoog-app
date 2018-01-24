@@ -68,21 +68,21 @@ class DatePicker extends Component {
         date,
         location: this.props.location
       },
-      animationType: 'slide-horizontal',
-      rightButtons: [
-        {
-          icon: require('../assets/share.png'), //if you want an image button
-          id: 'share', // id of the button which will pass to your press event handler. See the section bellow for Android specific button ids
-          buttonColor: 'white' // Set color for the button (can also be used in setButtons function to set different button style programatically)
-        }
-      ]
+      animationType: 'slide-horizontal' //, temporary disabled share button
+      // rightButtons: [
+      //   {
+      //     icon: require('../assets/share.png'), //if you want an image button
+      //     id: 'share', // id of the button which will pass to your press event handler. See the section bellow for Android specific button ids
+      //     buttonColor: 'white' // Set color for the button (can also be used in setButtons function to set different button style programatically)
+      //   }
+      // ]
     });
     console.log(formatDateApi(date));
   }
 
   render() {
     return (
-      <ScrollView>
+      <ScrollView style={styles.containerStyle}>
         <Calendar
           minDate={Date()}
           onDayPress={this.onDayPress}
@@ -101,7 +101,10 @@ class DatePicker extends Component {
 }
 
 const styles = StyleSheet.create({
-  calendar: {}
+  containerStyle: {
+    backgroundColor: '#ffffff',
+    height: '100%'
+  }
 });
 
 export default DatePicker;

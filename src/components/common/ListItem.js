@@ -53,7 +53,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     padding: 5,
     borderBottomWidth: 1,
-    borderBottomColor: '#D1D1D1'
+    borderBottomColor: '#D1D1D1',
+    backgroundColor: '#ffffff'
   },
   leftColStyle: {
     flex: 1,
