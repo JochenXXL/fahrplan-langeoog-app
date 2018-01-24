@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { AdMobBanner } from 'react-native-admob';
 
 import DatePicker from '../components/DatePicker';
+import BottomAdd from '../components/BottomAdd';
 
 class DatePickerTabScreen extends Component {
   render() {
     const { location, navigator } = this.props;
     return (
-      <View>
-        <View style={{ alignItems: 'center', paddingTop: 6 }}>
-          <AdMobBanner
-            adSize="banner"
-            adUnitID="ca-app-pub-8741291600421705/6216591044"
-            testDevices={[AdMobBanner.simulatorId]}
-            onAdFailedToLoad={error => console.error(error)}
-          />
+      <View style={{ flex: 1 }}>
+        <View style={{ flex: 1 }}>
+          <DatePicker location={location} navigator={navigator} />
         </View>
-        <DatePicker location={location} navigator={navigator} />
+
+        <BottomAdd />
       </View>
     );
   }

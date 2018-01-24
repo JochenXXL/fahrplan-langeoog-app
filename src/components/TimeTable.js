@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import { FlatList, ScrollView, View } from 'react-native';
-import { AdMobBanner } from 'react-native-admob';
+import { FlatList, ScrollView } from 'react-native';
 
 import Spinner from '../components/common/Spinner';
 import ListItem from './common/ListItem';
 import { formatDateApi } from '../formatDate';
 
 class TimeTable extends Component {
-  state = {
-    data: [],
-    isLoading: true
-  };
+  constructor(props) {
+    super(props);
 
-  componentDidMount() {
+    this.state = {
+      data: [],
+      isLoading: true
+    };
+  }
+
+  componentWillMount() {
     const dateFormatted = formatDateApi(this.props.date);
 
     fetch(
@@ -42,7 +45,7 @@ class TimeTable extends Component {
             location={this.props.location}
           />
         )}
-        style={{ paddingBottom: 100 }}
+        style={{ paddingBottom: 10 }}
       />
     );
 

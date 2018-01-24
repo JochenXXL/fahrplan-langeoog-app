@@ -1,17 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { AdMobBanner } from 'react-native-admob';
 
 import { formatDatePretty } from '../formatDate';
 
 const TimeTableDate = ({ date }) => (
   <View style={styles.containerStyle}>
-    <AdMobBanner
-      adSize="banner"
-      adUnitID="ca-app-pub-8741291600421705/6216591044"
-      testDevices={[AdMobBanner.simulatorId]}
-      onAdFailedToLoad={error => console.error(error)}
-    />
     <Text style={styles.TextStyle}>{formatDatePretty(date)}</Text>
   </View>
 );

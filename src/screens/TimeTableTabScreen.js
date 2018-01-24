@@ -1,10 +1,12 @@
 /* global alert:true */
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { captureScreen } from 'react-native-view-shot';
+import { AdMobBanner } from 'react-native-admob';
 
 import TimeTableDate from '../components/TimeTableDate';
 import TimeTable from '../components/TimeTable';
+import BottomAdd from '../components/BottomAdd';
 
 class TimeTableTabScreen extends Component {
   constructor(props) {
@@ -28,13 +30,17 @@ class TimeTableTabScreen extends Component {
   render() {
     console.log('loaded timetable');
     return (
-      <View>
+      <View style={{ flex: 1 }}>
         <TimeTableDate date={this.props.date} />
-        <TimeTable
-          date={this.props.date}
-          location={this.props.location}
-          navigator={this.props.navigator}
-        />
+        <View style={{ flex: 1 }}>
+          <TimeTable
+            date={this.props.date}
+            location={this.props.location}
+            navigator={this.props.navigator}
+          />
+        </View>
+
+        <BottomAdd />
       </View>
     );
   }
