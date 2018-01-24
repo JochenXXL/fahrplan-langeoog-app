@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 class ListItem extends Component {
   onPress = () => {
@@ -19,6 +19,8 @@ class ListItem extends Component {
   };
 
   render() {
+    const infoIcon = require('../../assets/App_Icon_Info.png');
+
     const { item } = this.props;
 
     let departureLocation = 'Hafen';
@@ -40,7 +42,9 @@ class ListItem extends Component {
             </Text>
           </View>
           <View style={styles.rightColStyle}>
-            <Text>Info</Text>
+            <View style={styles.iconContainer}>
+              <Image source={infoIcon} style={styles.iconStyle} />
+            </View>
           </View>
         </View>
       </TouchableOpacity>
@@ -81,6 +85,19 @@ const styles = StyleSheet.create({
   companyStyle: {
     fontSize: 14,
     color: '#4D4D4D'
+  },
+  iconContainer: {
+    borderRadius: 100,
+    backgroundColor: '#9D9D9D',
+    padding: 5
+  },
+  iconStyle: {
+    height: 12,
+    width: 12,
+    backgroundColor: '#9D9D9D',
+    tintColor: '#ffffff',
+    padding: 3,
+    borderRadius: 10
   }
 });
 
