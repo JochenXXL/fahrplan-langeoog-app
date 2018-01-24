@@ -39,14 +39,14 @@ Navigation.startTabBasedApp({
             location: 'Bensersiel'
           }
         }
-      ],
-      rightButtons: [
-        {
-          icon: require('./assets/share.png'),
-          id: 'share',
-          buttonColor: 'white'
-        }
-      ]
+      ] //, temorary disabled
+      // rightButtons: [
+      //   {
+      //     icon: require('./assets/share.png'),
+      //     id: 'share',
+      //     buttonColor: 'white'
+      //   }
+      // ]
     },
     {
       label: 'Langeoog',
@@ -77,14 +77,14 @@ Navigation.startTabBasedApp({
             location: 'Langeoog'
           }
         }
-      ],
-      rightButtons: [
-        {
-          icon: require('./assets/share.png'), //if you want an image button
-          id: 'share', // id of the button which will pass to your press event handler. See the section bellow for Android specific button ids
-          buttonColor: 'white' // Set color for the button (can also be used in setButtons function to set different button style programatically)
-        }
-      ]
+      ] //, temporary disabled
+      // rightButtons: [
+      //   {
+      //     icon: require('./assets/share.png'), //if you want an image button
+      //     id: 'share', // id of the button which will pass to your press event handler. See the section bellow for Android specific button ids
+      //     buttonColor: 'white' // Set color for the button (can also be used in setButtons function to set different button style programatically)
+      //   }
+      // ]
     },
     {
       label: 'Info',
