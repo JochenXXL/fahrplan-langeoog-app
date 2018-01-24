@@ -103,7 +103,7 @@ Navigation.startTabBasedApp({
     topTabsHeight: 30,
     navBarHeight: 45,
     tabBarBackgroundColor: '#ffffff',
-    tabBarButtonColor: '#6b77c2',
+    tabBarButtonColor: '#5D5D5D',
     tabBarSelectedButtonColor: '#002563',
     topBarBorderColor: '#3a4c91',
     topTabTextColor: '#9ca5c8',
