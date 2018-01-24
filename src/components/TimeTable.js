@@ -36,7 +36,11 @@ class TimeTable extends Component {
       <FlatList
         data={this.state.data}
         renderItem={({ item }) => (
-          <ListItem item={item} navigator={this.props.navigator} />
+          <ListItem
+            item={item}
+            navigator={this.props.navigator}
+            location={this.props.location}
+          />
         )}
         style={{ paddingBottom: 100 }}
       />

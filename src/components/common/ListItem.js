@@ -20,12 +20,19 @@ class ListItem extends Component {
 
   render() {
     const { item } = this.props;
+
+    let departureLocation = 'Hafen';
+    const { location } = this.props;
+    if (location === 'Langeoog') {
+      departureLocation = 'Bahnhof';
+    }
+
     return (
       <TouchableOpacity onPress={this.onPress}>
         <View style={styles.containerStyle}>
           <View style={styles.leftColStyle}>
             <Text style={styles.timeStyle}>{item.time}</Text>
-            <Text style={styles.locationStyle}>ab Hafen</Text>
+            <Text style={styles.locationStyle}>{departureLocation}</Text>
           </View>
           <View style={styles.centerColStyle}>
             <Text style={styles.companyStyle}>
