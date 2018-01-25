@@ -1,4 +1,4 @@
-rootProject.name = 'FahrplanLangeoog'
+rootProject.name = 'Fahrplan Langeoog'
 
 include ':app'
 
