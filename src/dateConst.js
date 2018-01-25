@@ -1,5 +1,5 @@
 export const WEEKDAY = {
-  0: 'Sonnatg',
+  0: 'Sonntag',
   1: 'Montag',
   2: 'Dienstag',
   3: 'Mittwoch',
