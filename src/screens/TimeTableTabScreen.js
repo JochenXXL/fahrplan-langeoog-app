@@ -1,8 +1,7 @@
 /* global alert:true */
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import { captureScreen } from 'react-native-view-shot';
-import { AdMobBanner } from 'react-native-admob';
 
 import TimeTableDate from '../components/TimeTableDate';
 import TimeTable from '../components/TimeTable';
@@ -11,21 +10,22 @@ import BottomAdd from '../components/BottomAdd';
 class TimeTableTabScreen extends Component {
   constructor(props) {
     super(props);
-    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+    //  this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
   }
 
-  onNavigatorEvent(event) {
-    if (event.id === 'share') {
-      console.log('lets share this screen');
-      captureScreen({
-        format: 'jpg',
-        quality: 0.8
-      }).then(
-        uri => console.log('Image saved to', uri),
-        error => console.error('Oops, snapshot failed', error)
-      );
-    }
-  }
+  //temorary disabled
+  // onNavigatorEvent(event) {
+  //   if (event.id === 'share') {
+  //     console.log('lets share this screen');
+  //     captureScreen({
+  //       format: 'jpg',
+  //       quality: 0.8
+  //     }).then(
+  //       uri => console.log('Image saved to', uri),
+  //       error => console.error('Oops, snapshot failed', error)
+  //     );
+  //   }
+  // }
 
   render() {
     console.log('loaded timetable');
